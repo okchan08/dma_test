@@ -1,0 +1,19 @@
+// This device tree file is used for FPGA region
+// Created on 2019/03/14/22:26
+// Y. Okesaku
+
+/dts-v1/;
+/plugin/;
+
+/ {
+	fragment@1 {
+		target-path = "/amba/fpga-region0";
+		#address-cells = <1>;
+		#size-cells = <1>;
+		__overlay__{
+			#address-cells = <1>;
+			#size-cells = <1>;
+			firmware-name = "mybit/dma_test.bin";
+		};
+	};
+};
